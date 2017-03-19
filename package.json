@@ -1,0 +1,34 @@
+{
+  "name": "k-",
+  "author": "maizhikun",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./Bin/",
+  "scripts": {
+    "build": "NODE_ENV=release babel ./Src --out-dir ./Publish",
+    "test": "jest"
+  },
+  "bin": {
+    "k": "./Bin/"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzkmzk/r.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzkmzk/.git/issues"
+  },
+  "homepage": "http://404mzk.com/",
+  "dependencies": {
+    "babel-preset-es2015": "6.22.0",
+    "colors": "1.1.2",
+    "es6-promise": "4.1.0",
+    "glob": "^7.1.1",
+    "json-comments": "0.2.1"
+  },
+  "devDependencies": {
+    "jest": "18.1.0"
+  }
+}

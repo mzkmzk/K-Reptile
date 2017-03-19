@@ -1,0 +1,440 @@
+ReferenceError: Can't find variable: process
+
+  phantomjs://platform/supports-colors.js:27
+[31mresourec size is NaN[39m
+{
+    "id": 86,
+    "url": "http://pingfore.qq.com/pingd?dm=www.qq.com&url=/&rdm=&rurl=&rarg=&pvid=2987948123&scr=1024x768&scl=32-bit&lang=zh-cn&java=0&pf=MacIntel&tz=-8&flash=-&ct=-&column=&subject=&vs=tcss.3.1.5&ext=nw%3D1%3Btm%3D7%3Bch%3D1&hurlcn=&rand=94490&reserved1=-1&tt=",
+    "request": {
+        "headers": [
+            {
+                "name": "Referer",
+                "value": "http://www.qq.com/"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            },
+            {
+                "name": "Accept",
+                "value": "*/*"
+            }
+        ],
+        "id": 86,
+        "method": "GET",
+        "time": "2017-03-17T06:47:38.822Z",
+        "url": "http://pingfore.qq.com/pingd?dm=www.qq.com&url=/&rdm=&rurl=&rarg=&pvid=2987948123&scr=1024x768&scl=32-bit&lang=zh-cn&java=0&pf=MacIntel&tz=-8&flash=-&ct=-&column=&subject=&vs=tcss.3.1.5&ext=nw%3D1%3Btm%3D7%3Bch%3D1&hurlcn=&rand=94490&reserved1=-1&tt="
+    },
+    "responses": {
+        "end": {
+            "contentType": null,
+            "headers": [
+                {
+                    "name": "Date",
+                    "value": "Fri, 17 Mar 2017 06:47:39 GMT"
+                },
+                {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                },
+                {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                }
+            ],
+            "id": 86,
+            "redirectURL": null,
+            "stage": "end",
+            "status": 200,
+            "statusText": "OK",
+            "time": "2017-03-17T06:47:39.733Z",
+            "url": "http://pingfore.qq.com/pingd?dm=www.qq.com&url=/&rdm=&rurl=&rarg=&pvid=2987948123&scr=1024x768&scl=32-bit&lang=zh-cn&java=0&pf=MacIntel&tz=-8&flash=-&ct=-&column=&subject=&vs=tcss.3.1.5&ext=nw%3D1%3Btm%3D7%3Bch%3D1&hurlcn=&rand=94490&reserved1=-1&tt="
+        }
+    },
+    "duration": 911,
+    "times": {
+        "request": 1489733258822,
+        "end": 1489733259733
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 107,
+    "url": "http://qos.report.qq.com/collect?type=1&name=www.qq.com&1=526&2=762",
+    "request": {
+        "headers": [
+            {
+                "name": "Referer",
+                "value": "http://www.qq.com/"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            },
+            {
+                "name": "Accept",
+                "value": "*/*"
+            }
+        ],
+        "id": 107,
+        "method": "GET",
+        "time": "2017-03-17T06:47:39.047Z",
+        "url": "http://qos.report.qq.com/collect?type=1&name=www.qq.com&1=526&2=762"
+    },
+    "responses": {
+        "end": {
+            "contentType": null,
+            "headers": [
+                {
+                    "name": "Server",
+                    "value": "Apache/1.3.33 (Unix)"
+                },
+                {
+                    "name": "Connection",
+                    "value": "close"
+                }
+            ],
+            "id": 107,
+            "redirectURL": null,
+            "stage": "end",
+            "status": 200,
+            "statusText": "OK",
+            "time": "2017-03-17T06:47:39.860Z",
+            "url": "http://qos.report.qq.com/collect?type=1&name=www.qq.com&1=526&2=762"
+        }
+    },
+    "duration": 812,
+    "times": {
+        "request": 1489733259048,
+        "end": 1489733259860
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 127,
+    "url": "http://cm.l.qq.com/?Bid=e6badf84ed501973b250433b2e7eb9b6&0.6746449391357601",
+    "request": {
+        "headers": [
+            {
+                "name": "Referer",
+                "value": "http://www.qq.com/"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            },
+            {
+                "name": "Accept",
+                "value": "*/*"
+            }
+        ],
+        "id": 127,
+        "method": "GET",
+        "time": "2017-03-17T06:47:39.747Z",
+        "url": "http://cm.l.qq.com/?Bid=e6badf84ed501973b250433b2e7eb9b6&0.6746449391357601"
+    },
+    "responses": {
+        "end": {
+            "contentType": null,
+            "headers": [],
+            "id": 127,
+            "redirectURL": null,
+            "stage": "end",
+            "status": null,
+            "statusText": null,
+            "time": "2017-03-17T06:47:40.099Z",
+            "url": "http://cm.l.qq.com/?Bid=e6badf84ed501973b250433b2e7eb9b6&0.6746449391357601"
+        }
+    },
+    "duration": 352,
+    "times": {
+        "request": 1489733259747,
+        "end": 1489733260099
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 142,
+    "url": "http://p.l.qq.com/p?oid=1,3156153,3103959,3178285,100,3169555,3178289,100,100,3103965,3185723&cid=0,0,1727519,0,0,1749899,0,0,0,1727523,0&loc=QQ_takeover,QQCOM_N_Extend_Video,QQCOM_N_Rectangle1,QQCOM_N_Width2,QQCOM_N_KJ_button1,QQCOM_Width3,QQCOM_N_Width4,QQCOM_N_button2,QQCOM_N_Rectangle3,QQ_HP_Upright4,QQ_HP_bottom_Width&aver=0,0,0,0,0,0,0,0,0,0,0&soid=+jGYDk2XWMuGiw4ixwB7KGq3AeQi,+jGYDk2XWMuGiw4ixwGiPX2mAeQi,+jGYDk2XWMuGiw4ixwIWtdNeAeQi,+jGYDk2XWMuGiw4ixwNoyRcmAeQi,+jGYDk2XWMuGiw4ixwTHWTMaAeQi,+jGYDk2XWMuGiw4ixwW7MOWxAeQi,+jGYDk2XWMuGiw4ixwZ5MgjBAeQi,+jGYDk2XWMuGiw4ixweTtFn3AeQi,+jGYDk2XWMuGiw4ixwgw1UlQAeQi,+jGYDk2XWMuGiw4ixwnFfkQmAeQi,+jGYDk2XWMuGiw4ixwr9tuAvAeQi&pri=&exp=1,1,1,1,1,1,1,1,1,1,1&pv_type=1,1,1,1,1,1,1,1,1,1,1&tango=&dtype=&targetid=&btoid=&pctr=&btpri=&extstr=&index=1,1,1,1,1,1,1,1,1,1,1&ping_data=dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w&chl=478,478,478,478,478,478,478,478,478,478,478&rurl=&page_type=1&k=&t=%E8%85%BE%E8%AE%AF%E9%A6%96%E9%A1%B5&r=&s=&0.419932562392205",
+    "request": {
+        "headers": [
+            {
+                "name": "Referer",
+                "value": "http://www.qq.com/"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            },
+            {
+                "name": "Accept",
+                "value": "*/*"
+            }
+        ],
+        "id": 142,
+        "method": "GET",
+        "time": "2017-03-17T06:47:39.811Z",
+        "url": "http://p.l.qq.com/p?oid=1,3156153,3103959,3178285,100,3169555,3178289,100,100,3103965,3185723&cid=0,0,1727519,0,0,1749899,0,0,0,1727523,0&loc=QQ_takeover,QQCOM_N_Extend_Video,QQCOM_N_Rectangle1,QQCOM_N_Width2,QQCOM_N_KJ_button1,QQCOM_Width3,QQCOM_N_Width4,QQCOM_N_button2,QQCOM_N_Rectangle3,QQ_HP_Upright4,QQ_HP_bottom_Width&aver=0,0,0,0,0,0,0,0,0,0,0&soid=+jGYDk2XWMuGiw4ixwB7KGq3AeQi,+jGYDk2XWMuGiw4ixwGiPX2mAeQi,+jGYDk2XWMuGiw4ixwIWtdNeAeQi,+jGYDk2XWMuGiw4ixwNoyRcmAeQi,+jGYDk2XWMuGiw4ixwTHWTMaAeQi,+jGYDk2XWMuGiw4ixwW7MOWxAeQi,+jGYDk2XWMuGiw4ixwZ5MgjBAeQi,+jGYDk2XWMuGiw4ixweTtFn3AeQi,+jGYDk2XWMuGiw4ixwgw1UlQAeQi,+jGYDk2XWMuGiw4ixwnFfkQmAeQi,+jGYDk2XWMuGiw4ixwr9tuAvAeQi&pri=&exp=1,1,1,1,1,1,1,1,1,1,1&pv_type=1,1,1,1,1,1,1,1,1,1,1&tango=&dtype=&targetid=&btoid=&pctr=&btpri=&extstr=&index=1,1,1,1,1,1,1,1,1,1,1&ping_data=dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w&chl=478,478,478,478,478,478,478,478,478,478,478&rurl=&page_type=1&k=&t=%E8%85%BE%E8%AE%AF%E9%A6%96%E9%A1%B5&r=&s=&0.419932562392205"
+    },
+    "responses": {
+        "end": {
+            "contentType": "text/html; charset=GB2312",
+            "headers": [
+                {
+                    "name": "Date",
+                    "value": "Fri, 17 Mar 2017 06:47:40 GMT"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "text/html; charset=GB2312"
+                },
+                {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                },
+                {
+                    "name": "Connection",
+                    "value": "keep-alive"
+                },
+                {
+                    "name": "Set-Cookie",
+                    "value": "psessionid=e9831fa_1489733259_0_89400; Domain=.l.qq.com; Path=/;\npsessiontime=1489733259; Domain=.l.qq.com; Path=/;"
+                }
+            ],
+            "id": 142,
+            "redirectURL": null,
+            "stage": "end",
+            "status": 200,
+            "statusText": "OK",
+            "time": "2017-03-17T06:47:40.035Z",
+            "url": "http://p.l.qq.com/p?oid=1,3156153,3103959,3178285,100,3169555,3178289,100,100,3103965,3185723&cid=0,0,1727519,0,0,1749899,0,0,0,1727523,0&loc=QQ_takeover,QQCOM_N_Extend_Video,QQCOM_N_Rectangle1,QQCOM_N_Width2,QQCOM_N_KJ_button1,QQCOM_Width3,QQCOM_N_Width4,QQCOM_N_button2,QQCOM_N_Rectangle3,QQ_HP_Upright4,QQ_HP_bottom_Width&aver=0,0,0,0,0,0,0,0,0,0,0&soid=+jGYDk2XWMuGiw4ixwB7KGq3AeQi,+jGYDk2XWMuGiw4ixwGiPX2mAeQi,+jGYDk2XWMuGiw4ixwIWtdNeAeQi,+jGYDk2XWMuGiw4ixwNoyRcmAeQi,+jGYDk2XWMuGiw4ixwTHWTMaAeQi,+jGYDk2XWMuGiw4ixwW7MOWxAeQi,+jGYDk2XWMuGiw4ixwZ5MgjBAeQi,+jGYDk2XWMuGiw4ixweTtFn3AeQi,+jGYDk2XWMuGiw4ixwgw1UlQAeQi,+jGYDk2XWMuGiw4ixwnFfkQmAeQi,+jGYDk2XWMuGiw4ixwr9tuAvAeQi&pri=&exp=1,1,1,1,1,1,1,1,1,1,1&pv_type=1,1,1,1,1,1,1,1,1,1,1&tango=&dtype=&targetid=&btoid=&pctr=&btpri=&extstr=&index=1,1,1,1,1,1,1,1,1,1,1&ping_data=dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w,dXNlcl9pbmZvPW9CM2pnVGs3RmhXXyZ1cF92ZXJzaW9uPUwzNTMmdXNlX2F4cD0wJmF4cGhlYWRlcj0w&chl=478,478,478,478,478,478,478,478,478,478,478&rurl=&page_type=1&k=&t=%E8%85%BE%E8%AE%AF%E9%A6%96%E9%A1%B5&r=&s=&0.419932562392205"
+        }
+    },
+    "duration": 224,
+    "times": {
+        "request": 1489733259811,
+        "end": 1489733260035
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 207,
+    "url": "http://im-x.jd.com/dsp/np?log=pfr9Cp2It_GYjFWtrwdTkKUii8ncxhstRr1aNgVXSEmGunINByD5Vk1wgTnWo9YlTqmKTu1BWK1XES4bYU4EwCkYt7QPJ9P_Wn6SnpRtC_HH2fv5s8viJJsJPq-JcoDv6mNkz7WmsFwvY6XNqkJXh6BhzsdMaWyvJxDWnz0tLOcqTbERmeGoVm0s1IBTsB1X7DdnFYk2DVClTGxY0Zf1L1gRJXahIjiHS_4LZOmccAp-z_4QsjX4NQrVVLIk7R7gwPcYjhFOO8BZF-dk_CBftuIVBB2c0_tjD7VWRUTlkbWt0OwRTzZt2axxgOndPm_ubWmi8aIR3KS58scLqNQpGQmdUMwNdhuylxlhl3MRLRg8vhQ2zYeZT1PZZwchoji0C8XlOa9mXSOoIXOYW0_4Sgg2IGE0DQjUVNQMoAeeiEvAzW02qYvHUChG-IkUw3_hcCK4nUtwC7LNpHNbQ80ofShQw_T6V5OGrDoZI7zPR5NnW442KwZakJI-JQPY2lr-A3_q6l7toooXnIupPNcVJv6k3J2Z2wZU6IaxI4-suq6FUCt3nZhauFd5LFdz2L8kVElxdXapI3qiobgMa2ynWAJsSNCrqyOimpQl54RfXgeDJ7o_Muv-URAf_INTnIGrpN3aUjROtCA2lD6ioQ6PU78od3dthzalLfKbUKtcBrkIU9n5_Ca-wzBlpHUBORgcgmJ80qIpnrFBvLoUVr1RV6ZJPCED7xes-Sx9SQ7Z5udLqfp-fBlTPaNFalf45wLvM04TPnVxfXlWJVvSI8FLR7yFuU4SI-Doxv8hv0RyKHnhhXma_wAO3X7-7FXnxYI8nGUEIGq0D9mgtF-PieCnnWxNzX40BX0ZkYubdq9Cpixm5Cibvb_jk9P_Tg6e2PD2XEzJDjOM8oMYOAoAxYMoWzzBFPMnrmOp1Ea__OoezUlWbfO51i1TkVjcq2j78SRMn-ZGRfEUMVyG1Nmo0jCscgfv4gWY2ZH4K_ppLWXzGziLMgymDqerETolMXjxCeIi-10QvXjuxo7pph50NqDO1gdazxFzC-LFM453T5KJoSI&v=407",
+    "request": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "*/*"
+            },
+            {
+                "name": "Referer",
+                "value": "http://x.jd.com/exsites?spread_type=2&ad_ids=882:5&location_info=0&adflag=1&mobileType=0&clkmn=http%3A%2F%2Fc.l.qq.com%2Flclick%3Fseq%3D20170104001105&expose="
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            }
+        ],
+        "id": 207,
+        "method": "GET",
+        "time": "2017-03-17T06:47:40.236Z",
+        "url": "http://im-x.jd.com/dsp/np?log=pfr9Cp2It_GYjFWtrwdTkKUii8ncxhstRr1aNgVXSEmGunINByD5Vk1wgTnWo9YlTqmKTu1BWK1XES4bYU4EwCkYt7QPJ9P_Wn6SnpRtC_HH2fv5s8viJJsJPq-JcoDv6mNkz7WmsFwvY6XNqkJXh6BhzsdMaWyvJxDWnz0tLOcqTbERmeGoVm0s1IBTsB1X7DdnFYk2DVClTGxY0Zf1L1gRJXahIjiHS_4LZOmccAp-z_4QsjX4NQrVVLIk7R7gwPcYjhFOO8BZF-dk_CBftuIVBB2c0_tjD7VWRUTlkbWt0OwRTzZt2axxgOndPm_ubWmi8aIR3KS58scLqNQpGQmdUMwNdhuylxlhl3MRLRg8vhQ2zYeZT1PZZwchoji0C8XlOa9mXSOoIXOYW0_4Sgg2IGE0DQjUVNQMoAeeiEvAzW02qYvHUChG-IkUw3_hcCK4nUtwC7LNpHNbQ80ofShQw_T6V5OGrDoZI7zPR5NnW442KwZakJI-JQPY2lr-A3_q6l7toooXnIupPNcVJv6k3J2Z2wZU6IaxI4-suq6FUCt3nZhauFd5LFdz2L8kVElxdXapI3qiobgMa2ynWAJsSNCrqyOimpQl54RfXgeDJ7o_Muv-URAf_INTnIGrpN3aUjROtCA2lD6ioQ6PU78od3dthzalLfKbUKtcBrkIU9n5_Ca-wzBlpHUBORgcgmJ80qIpnrFBvLoUVr1RV6ZJPCED7xes-Sx9SQ7Z5udLqfp-fBlTPaNFalf45wLvM04TPnVxfXlWJVvSI8FLR7yFuU4SI-Doxv8hv0RyKHnhhXma_wAO3X7-7FXnxYI8nGUEIGq0D9mgtF-PieCnnWxNzX40BX0ZkYubdq9Cpixm5Cibvb_jk9P_Tg6e2PD2XEzJDjOM8oMYOAoAxYMoWzzBFPMnrmOp1Ea__OoezUlWbfO51i1TkVjcq2j78SRMn-ZGRfEUMVyG1Nmo0jCscgfv4gWY2ZH4K_ppLWXzGziLMgymDqerETolMXjxCeIi-10QvXjuxo7pph50NqDO1gdazxFzC-LFM453T5KJoSI&v=407"
+    },
+    "responses": {
+        "end": {
+            "contentType": "image/gif",
+            "headers": [
+                {
+                    "name": "Server",
+                    "value": "netgo"
+                },
+                {
+                    "name": "Connection",
+                    "value": "close"
+                },
+                {
+                    "name": "Cache-Control",
+                    "value": "no-cache"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "image/gif"
+                },
+                {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                }
+            ],
+            "id": 207,
+            "redirectURL": null,
+            "stage": "end",
+            "status": 200,
+            "statusText": "OK",
+            "time": "2017-03-17T06:47:40.353Z",
+            "url": "http://im-x.jd.com/dsp/np?log=pfr9Cp2It_GYjFWtrwdTkKUii8ncxhstRr1aNgVXSEmGunINByD5Vk1wgTnWo9YlTqmKTu1BWK1XES4bYU4EwCkYt7QPJ9P_Wn6SnpRtC_HH2fv5s8viJJsJPq-JcoDv6mNkz7WmsFwvY6XNqkJXh6BhzsdMaWyvJxDWnz0tLOcqTbERmeGoVm0s1IBTsB1X7DdnFYk2DVClTGxY0Zf1L1gRJXahIjiHS_4LZOmccAp-z_4QsjX4NQrVVLIk7R7gwPcYjhFOO8BZF-dk_CBftuIVBB2c0_tjD7VWRUTlkbWt0OwRTzZt2axxgOndPm_ubWmi8aIR3KS58scLqNQpGQmdUMwNdhuylxlhl3MRLRg8vhQ2zYeZT1PZZwchoji0C8XlOa9mXSOoIXOYW0_4Sgg2IGE0DQjUVNQMoAeeiEvAzW02qYvHUChG-IkUw3_hcCK4nUtwC7LNpHNbQ80ofShQw_T6V5OGrDoZI7zPR5NnW442KwZakJI-JQPY2lr-A3_q6l7toooXnIupPNcVJv6k3J2Z2wZU6IaxI4-suq6FUCt3nZhauFd5LFdz2L8kVElxdXapI3qiobgMa2ynWAJsSNCrqyOimpQl54RfXgeDJ7o_Muv-URAf_INTnIGrpN3aUjROtCA2lD6ioQ6PU78od3dthzalLfKbUKtcBrkIU9n5_Ca-wzBlpHUBORgcgmJ80qIpnrFBvLoUVr1RV6ZJPCED7xes-Sx9SQ7Z5udLqfp-fBlTPaNFalf45wLvM04TPnVxfXlWJVvSI8FLR7yFuU4SI-Doxv8hv0RyKHnhhXma_wAO3X7-7FXnxYI8nGUEIGq0D9mgtF-PieCnnWxNzX40BX0ZkYubdq9Cpixm5Cibvb_jk9P_Tg6e2PD2XEzJDjOM8oMYOAoAxYMoWzzBFPMnrmOp1Ea__OoezUlWbfO51i1TkVjcq2j78SRMn-ZGRfEUMVyG1Nmo0jCscgfv4gWY2ZH4K_ppLWXzGziLMgymDqerETolMXjxCeIi-10QvXjuxo7pph50NqDO1gdazxFzC-LFM453T5KJoSI&v=407"
+        }
+    },
+    "duration": 118,
+    "times": {
+        "request": 1489733260236,
+        "end": 1489733260354
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 209,
+    "url": "http://im-x.jd.com/dsp/np?log=ExVr1ekITVS54_nCf0hitdqtPSvuwSQF3M61pER8A0BbfkWnNsAzCF2OTWXHWdNeF9H9ATWAe3h0lWUCGJ5q-AbfHUSkgCs4z2JwdRkiNoHiHR5IpagxTaNqQm1-uHVbE7kKvZh2I0wCRwQHBrv7E6wK1TVrpx8CC1VYgBeZpuctV3FQTIqlPMbLdOLbon5Cy_JzRCu4zFZBMierepAJprmWIawqrfCPPkHnk3fFa_I1qSD_QZdeBc8BNloB4zYvbk1fbqpZPFif5uwBP7Ae4bs9P80BSBnnA9F2P6hYgEWKBmofbXuWn0BPU8Kcb2kXfWHpjKt3cdahKTdWbIP51wiSZmOmTFmmHQtA_TnU4zoSJu86ek9EQvTditw61iNjQB7FIbn723olabISWKCuzhGIe0JPxnYnFyLOFUALFf-qNoOYhuLNaKhalpTDKDvmmD4lxBemaAtx6aN-eZLeLJF_BsfQ8CXqoYlXzHDi2u60QwHZQZCDHNbWEUnF_Yp0LIZYJ3MqZZAICsI1N1251Lm0REM6Y0xZtc1stn6UPP-o5PFsu08CvEqK-0kDBgFDFn9X7CI9UonRp1swgT4s5fmT_CXhXKc_e_KGeonLnmikUaJJWkPsazSB68t1UQa_AhNeLYedWmYky3nrhz8IndzuvvP9kmQ7pyLjYpvgF7lHsIyT4iE70KBcjC9HWIGkSFfySs75WBbMh2PXQi_1fvaz3juDcZJkD0xb2b_7O9Znmq2aoyfY4D1wcfGY65Azu8EQxsQMkp_jEnCccP5KkLvKujiFFzwc3gOX8OkA49G5vnmvXbAwIIe9zKkFeD1lnc5ER2aBW7_5bSjpciOFvk7D9S5YqmQy3Hzafwf33qq_q5_Wd4eNfT__5ZvMS1gayW5CT-_jwTOWa1gWQgTEyUeEIS-OVF3U66mf-J4QU8-6LUIzK81D1vozmN0Qtv5-r9SovRwzio0bnyJWA3rDc5z8PXXoRDWeZ5-j9Ek2UmGQC_p-nT4xSnm0JzYNWnRpITdBX5RRoOdOsK4sdtT9Kb9DANcQ-zlO0-tUJiEp0uUjy80Fr86iUwcv5JrtcktLXTGZvAMGYvvCoy7fneqlJtAvE4aboXGraCXUGTHZZ3MpIZ9848nef1AZkOWXxsYs1S1AQWdgprUujnRsYYgbVMw3NddCO8Dv7lLTTCrx24nqAgGINnEGj_YlWXYSMk2AIJjWsMtbbKV_LDBngXqoXiHqFE5IXizxBlBa8_xyzDUlaBFwHP2ixOzvW2m6kIi1JL3EkNoywojpJiGaJGbNHZEQARdaEnDg2pQnQ6hQiExtsThvt9JOGGLyb11amw0p&v=407",
+    "request": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "*/*"
+            },
+            {
+                "name": "Referer",
+                "value": "http://x.jd.com/exsites?spread_type=2&ad_ids=162:5&location_info=0&adflag=1&mobileType=0&clkmn=http%3A%2F%2Fc.l.qq.com%2Flclick%3Fseq%3D20170104001104&expose="
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            }
+        ],
+        "id": 209,
+        "method": "GET",
+        "time": "2017-03-17T06:47:40.248Z",
+        "url": "http://im-x.jd.com/dsp/np?log=ExVr1ekITVS54_nCf0hitdqtPSvuwSQF3M61pER8A0BbfkWnNsAzCF2OTWXHWdNeF9H9ATWAe3h0lWUCGJ5q-AbfHUSkgCs4z2JwdRkiNoHiHR5IpagxTaNqQm1-uHVbE7kKvZh2I0wCRwQHBrv7E6wK1TVrpx8CC1VYgBeZpuctV3FQTIqlPMbLdOLbon5Cy_JzRCu4zFZBMierepAJprmWIawqrfCPPkHnk3fFa_I1qSD_QZdeBc8BNloB4zYvbk1fbqpZPFif5uwBP7Ae4bs9P80BSBnnA9F2P6hYgEWKBmofbXuWn0BPU8Kcb2kXfWHpjKt3cdahKTdWbIP51wiSZmOmTFmmHQtA_TnU4zoSJu86ek9EQvTditw61iNjQB7FIbn723olabISWKCuzhGIe0JPxnYnFyLOFUALFf-qNoOYhuLNaKhalpTDKDvmmD4lxBemaAtx6aN-eZLeLJF_BsfQ8CXqoYlXzHDi2u60QwHZQZCDHNbWEUnF_Yp0LIZYJ3MqZZAICsI1N1251Lm0REM6Y0xZtc1stn6UPP-o5PFsu08CvEqK-0kDBgFDFn9X7CI9UonRp1swgT4s5fmT_CXhXKc_e_KGeonLnmikUaJJWkPsazSB68t1UQa_AhNeLYedWmYky3nrhz8IndzuvvP9kmQ7pyLjYpvgF7lHsIyT4iE70KBcjC9HWIGkSFfySs75WBbMh2PXQi_1fvaz3juDcZJkD0xb2b_7O9Znmq2aoyfY4D1wcfGY65Azu8EQxsQMkp_jEnCccP5KkLvKujiFFzwc3gOX8OkA49G5vnmvXbAwIIe9zKkFeD1lnc5ER2aBW7_5bSjpciOFvk7D9S5YqmQy3Hzafwf33qq_q5_Wd4eNfT__5ZvMS1gayW5CT-_jwTOWa1gWQgTEyUeEIS-OVF3U66mf-J4QU8-6LUIzK81D1vozmN0Qtv5-r9SovRwzio0bnyJWA3rDc5z8PXXoRDWeZ5-j9Ek2UmGQC_p-nT4xSnm0JzYNWnRpITdBX5RRoOdOsK4sdtT9Kb9DANcQ-zlO0-tUJiEp0uUjy80Fr86iUwcv5JrtcktLXTGZvAMGYvvCoy7fneqlJtAvE4aboXGraCXUGTHZZ3MpIZ9848nef1AZkOWXxsYs1S1AQWdgprUujnRsYYgbVMw3NddCO8Dv7lLTTCrx24nqAgGINnEGj_YlWXYSMk2AIJjWsMtbbKV_LDBngXqoXiHqFE5IXizxBlBa8_xyzDUlaBFwHP2ixOzvW2m6kIi1JL3EkNoywojpJiGaJGbNHZEQARdaEnDg2pQnQ6hQiExtsThvt9JOGGLyb11amw0p&v=407"
+    },
+    "responses": {
+        "end": {
+            "contentType": "image/gif",
+            "headers": [
+                {
+                    "name": "Server",
+                    "value": "openresty"
+                },
+                {
+                    "name": "Date",
+                    "value": "Fri, 17 Mar 2017 06:47:40 GMT"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "image/gif"
+                },
+                {
+                    "name": "Transfer-Encoding",
+                    "value": "chunked"
+                },
+                {
+                    "name": "Connection",
+                    "value": "close"
+                },
+                {
+                    "name": "Expires",
+                    "value": "Fri, 17 Mar 2017 06:47:39 GMT"
+                },
+                {
+                    "name": "Cache-Control",
+                    "value": "no-cache"
+                }
+            ],
+            "id": 209,
+            "redirectURL": null,
+            "stage": "end",
+            "status": 200,
+            "statusText": "OK",
+            "time": "2017-03-17T06:47:40.356Z",
+            "url": "http://im-x.jd.com/dsp/np?log=ExVr1ekITVS54_nCf0hitdqtPSvuwSQF3M61pER8A0BbfkWnNsAzCF2OTWXHWdNeF9H9ATWAe3h0lWUCGJ5q-AbfHUSkgCs4z2JwdRkiNoHiHR5IpagxTaNqQm1-uHVbE7kKvZh2I0wCRwQHBrv7E6wK1TVrpx8CC1VYgBeZpuctV3FQTIqlPMbLdOLbon5Cy_JzRCu4zFZBMierepAJprmWIawqrfCPPkHnk3fFa_I1qSD_QZdeBc8BNloB4zYvbk1fbqpZPFif5uwBP7Ae4bs9P80BSBnnA9F2P6hYgEWKBmofbXuWn0BPU8Kcb2kXfWHpjKt3cdahKTdWbIP51wiSZmOmTFmmHQtA_TnU4zoSJu86ek9EQvTditw61iNjQB7FIbn723olabISWKCuzhGIe0JPxnYnFyLOFUALFf-qNoOYhuLNaKhalpTDKDvmmD4lxBemaAtx6aN-eZLeLJF_BsfQ8CXqoYlXzHDi2u60QwHZQZCDHNbWEUnF_Yp0LIZYJ3MqZZAICsI1N1251Lm0REM6Y0xZtc1stn6UPP-o5PFsu08CvEqK-0kDBgFDFn9X7CI9UonRp1swgT4s5fmT_CXhXKc_e_KGeonLnmikUaJJWkPsazSB68t1UQa_AhNeLYedWmYky3nrhz8IndzuvvP9kmQ7pyLjYpvgF7lHsIyT4iE70KBcjC9HWIGkSFfySs75WBbMh2PXQi_1fvaz3juDcZJkD0xb2b_7O9Znmq2aoyfY4D1wcfGY65Azu8EQxsQMkp_jEnCccP5KkLvKujiFFzwc3gOX8OkA49G5vnmvXbAwIIe9zKkFeD1lnc5ER2aBW7_5bSjpciOFvk7D9S5YqmQy3Hzafwf33qq_q5_Wd4eNfT__5ZvMS1gayW5CT-_jwTOWa1gWQgTEyUeEIS-OVF3U66mf-J4QU8-6LUIzK81D1vozmN0Qtv5-r9SovRwzio0bnyJWA3rDc5z8PXXoRDWeZ5-j9Ek2UmGQC_p-nT4xSnm0JzYNWnRpITdBX5RRoOdOsK4sdtT9Kb9DANcQ-zlO0-tUJiEp0uUjy80Fr86iUwcv5JrtcktLXTGZvAMGYvvCoy7fneqlJtAvE4aboXGraCXUGTHZZ3MpIZ9848nef1AZkOWXxsYs1S1AQWdgprUujnRsYYgbVMw3NddCO8Dv7lLTTCrx24nqAgGINnEGj_YlWXYSMk2AIJjWsMtbbKV_LDBngXqoXiHqFE5IXizxBlBa8_xyzDUlaBFwHP2ixOzvW2m6kIi1JL3EkNoywojpJiGaJGbNHZEQARdaEnDg2pQnQ6hQiExtsThvt9JOGGLyb11amw0p&v=407"
+        }
+    },
+    "duration": 108,
+    "times": {
+        "request": 1489733260248,
+        "end": 1489733260356
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 220,
+    "url": "http://cm.pos.baidu.com/allyes?allyes_id=rOt_rAKSAH0AExgA0wh81epI&allyes_cver=2",
+    "request": {
+        "headers": [
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            },
+            {
+                "name": "Accept",
+                "value": "*/*"
+            }
+        ],
+        "id": 220,
+        "method": "GET",
+        "time": "2017-03-17T06:47:40.481Z",
+        "url": "http://cm.pos.baidu.com/allyes?allyes_id=rOt_rAKSAH0AExgA0wh81epI&allyes_cver=2"
+    },
+    "responses": {},
+    "duration": "-",
+    "times": {
+        "request": 1489733260481
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 221,
+    "url": "https://wmcdn.qtmojo.cn/wm/winmax/pmp_qq_03/default-release.htm?123",
+    "request": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            }
+        ],
+        "id": 221,
+        "method": "GET",
+        "time": "2017-03-17T06:47:40.484Z",
+        "url": "https://wmcdn.qtmojo.cn/wm/winmax/pmp_qq_03/default-release.htm?123"
+    },
+    "responses": {},
+    "duration": "-",
+    "times": {
+        "request": 1489733260484
+    }
+}
+[31mresourec size is NaN[39m
+{
+    "id": 222,
+    "url": "http://mmae.qtmojo.com/x?_t=15&_imd=FOOEN3P5g0BTexZ1epv&_by=0&_crid=0&_ads=279-80&_deal_id=0&_pr=0&_dt=4&_dis=0&_pf=MacIntel&_page=http%3A%2F%2Fwww.qq.com%2F",
+    "request": {
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"
+            }
+        ],
+        "id": 222,
+        "method": "GET",
+        "time": "2017-03-17T06:47:40.487Z",
+        "url": "http://mmae.qtmojo.com/x?_t=15&_imd=FOOEN3P5g0BTexZ1epv&_by=0&_crid=0&_ads=279-80&_deal_id=0&_pr=0&_dt=4&_dis=0&_pf=MacIntel&_page=http%3A%2F%2Fwww.qq.com%2F"
+    },
+    "responses": {},
+    "duration": "-",
+    "times": {
+        "request": 1489733260487
+    }
+}
+{
+    "dom_content_loaded": -1,
+    "atf": -1,
+    "window_onload": -1,
+    "total_resources_num": 223,
+    "total_resources_size": 2259839
+}
+Loading time 2268 msec
