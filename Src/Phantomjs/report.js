@@ -1,15 +1,17 @@
 "use strict";
 
 
-
 var page = require('webpage').create(),
     Resources = require('./Resources'),
+    server = require('webserver').create(),
+    port = 10220,
     resources = new Resources(page),
     system = require('system'),
     ATF = require('./ATF.js'),
     _atf = new ATF(page),
     fs =  require("fs"),
     performance,
+    Listener_Page = require('./Listener_Page.js'), 
     k_report,
     result = {
         navigationStart: -1,
@@ -21,58 +23,65 @@ var page = require('webpage').create(),
     },
     t, address;
 
+new Listener_Page(phantom, page);
+
 page.onInitialized = function() {
-    console.log('injectJs'+page.injectJs('../JS/get_data.js'));
-    console.log('injectJs'+page.injectJs('../JS/atf.js'));
+    console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
+    console.log('injectJs copy_to_html'+page.injectJs('../JS/copy_to_html.js'));
+
 };
 
-page.onAlert = function() {
-    console.log(arguments);
-    //printArgs.apply(this, arguments);
-};
-console.log(page.renderBuffer);
+server.listen(port, function(req, res){
+    try{
+        console.log('server ' + JSON.stringify(req, null, 2));
+        res.statusCode = 200;
+       res.headers = {
+        'Access-Control-Allow-Origin': '*'
+        };
+        res.write(JSON.stringify(req, null, 4));
+        res.close();
+    }catch(e){
+        console.log('server error '+e);
+    }
+  // coding...
+})
 
-page.onLoadStarted = function() {
-    console.log('body height: '+ page.evaluate(function(){
-        //document.body.style.cssText = 'height: 100px; overflow:hidden';
-        return document.body.style.cssText;
-    }));
-     
-    console.log("page.onLoadStarted");
-    //printArgs.apply(this, arguments);
+
+page.zoomFactor = 0.01;
+
+page.clipRect = {
+  width: 1400,
+  height: 900
 };
+
 
 if (system.args.length === 1) {
     console.log('Usage: loadspeed.js <some URL>');
     phantom.exit(1);
 } else {
 
-    page.evaluate(function(){
-        
-        return  window.performance;
-    })
     t = Date.now();
     address = system.args[1];
     _atf.get_interval_capture();
-    page.viewportSize = { width: 100, height: 100 }
+    page.viewportSize = { width: 1400, height: 900 }
     page.open(address, function (status) {
-        
+        console.log('injectJs jqueru'+page.injectJs('../JS/jquery-1.11.3.min.js'));
+    console.log('injectJs similar_picture'+page.injectJs('../JS/similar_picture.js'));
         if (status !== 'success') {
             console.log('FAIL to load the address');
         } else {
+            _atf.page_finish = true;
+            //try{
             t = Date.now() - t;
             console.log('Loading time ' + t + ' msec');
-            k_report =  page.evaluate(function(){
-                return  window.k_report;
-            });
+            
+            k_report = page.evaluate(function(){
+                return window.k_report;
+            })
             performance =  page.evaluate(function(){
                 return  window.performance;
             })
-            //console.log('printAboveTheFoldCss'+page.evaluate(function(){
-            //    var a
-            //    return printAboveTheFoldCss();
-            //}))
-            //console.log(JSON.stringify(performance, null, 4))
+           
             result.navigationStart = performance.timing.navigationStart;
             result.dom_complete = k_report.dom_complete;
             result.window_onload = k_report.window_onload;
@@ -82,23 +91,32 @@ if (system.args.length === 1) {
             //console.log('resources: '+JSON.stringify(result, null, 4))
             
             
-            _atf.page_finish = true;
-            console.log('_atf.capture_array.length'+_atf.capture_array.length)
             
-            for (var i = 0; i < _atf.capture_array.length; i++) {
-                console.log(i)
-                //console.log( _atf.capture_array[i])
-                try{
-                    console.log(new Buffer(_atf.capture_array[i],'base64'))
-                }catch(e){console.log(e)}
+            //console.log('_atf.capture_array.length'+_atf.capture_array.length)
+           
+           
+            page.evaluate(function(atf){
+                setTimeout(function(){
+                    window.judge_picture_evaluate(atf);
+                    window.copy_to_html(atf);
+                },2000)
                 
-                console.log( _atf.capture_array[i].length)
-                fs.writeFile(new Date().getTime() + '.png', new Buffer(_atf.capture_array[i],'base64'), function(){
-                    if (err) throw err;
-                }) 
-            }
-            
-            phantom.exit();
+            },_atf);
+            setTimeout(function(){
+                console.log('window_error'+JSON.stringify(page.evaluate(function(){
+                    return window.error_message;
+                })), null, 4)
+            },3000)
+             //}catch(e){console.log(e)};
+
+            setTimeout(function(){
+                page.clipRect = {
+                  
+                };
+                page.render('xunlei.png');
+                 phantom.exit();
+            },8000)
+           
 
         }
         //setTimeout(function(){

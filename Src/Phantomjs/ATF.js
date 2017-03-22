@@ -1,12 +1,10 @@
 var Promise = require('es6-promise').Promise;
 
 var ATF =  function( page ){
-    page.evaluate(function(){
-        document.body.style.cssText = 'height: 100px; overflow:hidden'
-        return  window.performance;
-    })
+
     this.page = page;
     this.capture_array = [];
+    this.capture_array_image = [];
     this.page_finish = false;
 }
 
@@ -22,12 +20,20 @@ ATF.prototype.get_interval_capture = function( ){
             })
         })
         .then(function(){
+            var index = 0 ;
             //self.page.render( new Date().getTime() + '.png')
             var interval = setInterval(function(){
-                if (self.page_finish) clearInterval(interval)
+                if (self.page_finish) {
+                    clearInterval(interval)
+                } 
                 //console.log(self.page.renderBase64 + 'self page')
                 //console.log(self.page.renderBase64('PNG'))
-                self.capture_array.push( self.page.render(new Date().getTime()+'.png',{format: 'png', quality: '1'}) )
+                self.capture_array.push( self.page.renderBase64('PNG') )
+                console.log('self.capture_array.length'+self.capture_array.length);
+                self.page.render('./__temp_atf_picture/'+ new Date().getTime()+'hehe.png',{format: 'png', quality: 100}) 
+                 console.log(index);
+                console.log(new Date().getTime())
+                index++;
                 //this.capture_array.push( page.renderBase64('PNG') )
             },0)
         })
