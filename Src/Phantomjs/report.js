@@ -2,13 +2,21 @@
 
 
 var page = require('webpage').create(),
-    Resources = require('./Resources'),
+    promise_page_event = require('./promise_page_event.js');
+
+promise_page_event( page );
+//page.page_on_initialized = [];
+//page.page_on_load_started = [];
+//page.page_on_load_finished = [];
+
+var Resources = require('./Resources'),
+    Promise = require('es6-promise').Promise,
     server = require('webserver').create(),
     port = 10220,
     resources = new Resources(page),
     system = require('system'),
-    ATF = require('./ATF.js'),
-    _atf = new ATF(page),
+    Screenshot = require('./Screenshot.js'),
+    screenshot = new Screenshot(page),
     fs =  require("fs"),
     performance,
     Listener_Page = require('./Listener_Page.js'), 
@@ -23,36 +31,35 @@ var page = require('webpage').create(),
     },
     t, address;
 
+
 new Listener_Page(phantom, page);
 
-page.onInitialized = function() {
+
+
+page.on_initialized_promise.push(function(){
     console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
-    console.log('injectJs copy_to_html'+page.injectJs('../JS/copy_to_html.js'));
-
-};
-
-server.listen(port, function(req, res){
-    try{
-        console.log('server ' + JSON.stringify(req, null, 2));
-        res.statusCode = 200;
-       res.headers = {
-        'Access-Control-Allow-Origin': '*'
-        };
-        res.write(JSON.stringify(req, null, 4));
-        res.close();
-    }catch(e){
-        console.log('server error '+e);
-    }
-  // coding...
 })
+/*page.onInitialized = function(){
+    console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
+    var self_argument = arguments;
+
+    page.page_on_initialized.forEach(function(element){
+    if ( typeof element !== 'function') return;
+        console.log('element'+arguments);
+        element.apply(page, self_argument);
+    })
+    
+
+}
 
 
-page.zoomFactor = 0.01;
-
-page.clipRect = {
-  width: 1400,
-  height: 900
-};
+page.onLoadFinished = function(){
+    page.on_load_finished_promise.reduce(function(promise, callback){
+        return promise.then(function(){
+            return callback();
+        })
+    },Promise.resolve())
+}*/
 
 
 if (system.args.length === 1) {
@@ -62,15 +69,12 @@ if (system.args.length === 1) {
 
     t = Date.now();
     address = system.args[1];
-    _atf.get_interval_capture();
-    page.viewportSize = { width: 1400, height: 900 }
+    
     page.open(address, function (status) {
-        console.log('injectJs jqueru'+page.injectJs('../JS/jquery-1.11.3.min.js'));
-    console.log('injectJs similar_picture'+page.injectJs('../JS/similar_picture.js'));
+        
         if (status !== 'success') {
             console.log('FAIL to load the address');
         } else {
-            _atf.page_finish = true;
             //try{
             t = Date.now() - t;
             console.log('Loading time ' + t + ' msec');
@@ -87,27 +91,10 @@ if (system.args.length === 1) {
             result.window_onload = k_report.window_onload;
             result.total_resources_num = resources.total_resources_num;
             result.total_resources_size = resources.total_resources_size;
-            console.log(JSON.stringify(result, null, 4));
-            //console.log('resources: '+JSON.stringify(result, null, 4))
-            
-            
-            
-            //console.log('_atf.capture_array.length'+_atf.capture_array.length)
+            console.log('open callback'+JSON.stringify(result, null, 4));
+
            
            
-            page.evaluate(function(atf){
-                setTimeout(function(){
-                    window.judge_picture_evaluate(atf);
-                    window.copy_to_html(atf);
-                },2000)
-                
-            },_atf);
-            setTimeout(function(){
-                console.log('window_error'+JSON.stringify(page.evaluate(function(){
-                    return window.error_message;
-                })), null, 4)
-            },3000)
-             //}catch(e){console.log(e)};
 
             setTimeout(function(){
                 page.clipRect = {
