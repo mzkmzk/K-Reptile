@@ -7,6 +7,8 @@ var EVENT_NAME  = [
         'RepaintRequested',//on_repaintrequested_promise
         'ResourceRequested',//on_resourcerequested_promise
         'ResourceReceived', //on_resourcereceived_promise
+        'Callback',//on_callback_promise
+        'Alert' //on_alert_promise
     ],
     Promise = require('es6-promise').Promise
 
@@ -24,7 +26,7 @@ var promise_page_event = function(page) {
                     if (typeof callback === 'function'){
                         return callback.apply(page, self_arguments)
                     }
-                    return;
+                    //return;
                     //return callback && callback();
                 })
             },Promise.resolve())

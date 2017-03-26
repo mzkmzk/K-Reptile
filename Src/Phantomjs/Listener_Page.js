@@ -27,9 +27,11 @@ var Listener_Page = function(phantom, page){
 
   };
 
-  page.onAlert = function() {
+  page.on_alert_promise.push(function(){
     console.log('Listener_Page onAlert'+JSON.stringify(arguments));
-  };
+    return;
+  })
+ 
 
   page.onResourceError = function(){
     console.log('Listener_Page page.onResourceError'+ JSON.stringify(arguments));

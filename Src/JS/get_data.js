@@ -10,4 +10,12 @@ document.addEventListener( 'DOMContentLoaded', function(){
 
 window.onload = function(){
     window.k_report.window_onload = new Date().getTime();
+    alert(typeof window.callPhantom)
+    alert(JSON.stringify({
+        command: 'window_onload_exit'
+      }))
+    callPhantom({
+        command: 'window_onload_exit'
+      });
+    alert('window.onload '+window.k_report.window_onload)
 }

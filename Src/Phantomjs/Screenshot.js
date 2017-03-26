@@ -4,7 +4,7 @@ var Screenshot =  function( page ){
 
     this.page = page;
     this.capture_array = [];
-    this.capture_array_image = [];
+    //this.capture_array_image = [];
     this.page_finish = false;
     this.intervalId = null;
     this.set_listener();
@@ -27,17 +27,19 @@ var Screenshot =  function( page ){
 Screenshot.prototype.get_interval_capture = function(){
     var self = this;
     
-    var index = 0 ;
-    //self.page.render( new Date().getTime() + '.png')
+   
     self.intervalId = setInterval(function(){
+        var time = new Date().getTime();
+        self.capture_array.push( {
+            time: time,
+            image_base64: self.page.renderBase64('PNG'),
+            image: null
+        } )
         
-        self.capture_array.push( self.page.renderBase64('PNG') )
-        console.log('self.capture_array.length'+self.capture_array.length);
         self.page.render('./__temp_atf_picture/'+ new Date().getTime()+'hehe.png',{format: 'png', quality: 100}) 
-         console.log(index);
-        console.log(new Date().getTime())
-        index++;
-        //this.capture_array.push( page.renderBase64('PNG') )
+
+        console.log(time)
+
     },0)
     console.log('get self.interval'+self.intervalId)
         
@@ -50,18 +52,37 @@ Screenshot.prototype.set_listener = function(){
     })
 
     this.page.on_loadfinished_promise.push(function(){
-
+        //console.log('open callback'+JSON.stringify(result, null, 4));
         return  new Promise(function(resolve){
             clearInterval( self.intervalId );
-            setTimeout(function(){
+            
+            //setTimeout(function(){
+                
+                self.page.on_alert_promise.push(function(result){
+                    console.log('callback'+JSON.stringify(arguments));
+                    result = JSON.parse(result);
+                    
+                    if (result && result.command === 'computer_similar_exit') {
+                        //window.screen_shot.white_screen = result.data.white_screen
+                        //window.screen_shot.atf = result.data.atf_time
+                        resolve();
+                    }
+                    return;
+                });
+                console.log(self.page.on_alert_promise)
+
                 page.evaluate(function(screenshot){
                 
                     window.copy_to_html(screenshot);
                     window.judge_picture_evaluate(screenshot);
+
+                },self);
                 
-                },screenshot);
-                resolve()
-            },2000)
+                
+
+                //resolve();
+                
+            //},0)
             
             
         })

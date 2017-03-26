@@ -10,6 +10,7 @@ promise_page_event( page );
 //page.page_on_load_finished = [];
 
 var Resources = require('./Resources'),
+    self = this,
     Promise = require('es6-promise').Promise,
     server = require('webserver').create(),
     port = 10220,
@@ -18,12 +19,12 @@ var Resources = require('./Resources'),
     Screenshot = require('./Screenshot.js'),
     screenshot = new Screenshot(page),
     fs =  require("fs"),
-    performance,
     Listener_Page = require('./Listener_Page.js'), 
-    k_report,
+    performance, k_report, similar_picture,
     result = {
         navigationStart: -1,
         dom_complete: -1,
+        white_screen: -1,
         atf: -1,
         window_onload: -1,
         total_resources_num: -1,
@@ -35,32 +36,64 @@ var Resources = require('./Resources'),
 new Listener_Page(phantom, page);
 
 
-
 page.on_initialized_promise.push(function(){
     console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
 })
-/*page.onInitialized = function(){
-    console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
-    var self_argument = arguments;
 
-    page.page_on_initialized.forEach(function(element){
-    if ( typeof element !== 'function') return;
-        console.log('element'+arguments);
-        element.apply(page, self_argument);
-    })
+page.on_loadfinished_promise.push(function(){
+    console.log('on_loadfinished_promise')
+    return  new Promise(function(resolve){
+                    var window_onload = self.page.evaluate(function(){
+                        return window.k_report.window_onload
+
+                    })
+                    if ( window_onload ) {
+                        resolve();
+                    }else {
+                        self.page.on_alert_promise.push(function(result){
+                            result = JSON.parse(result);
+                            //console.log(  'self.page.on_aler_promise' +JSON.stringify(result));
+                            if (result && result.command === 'window_onload_exit') {
+                                resolve();
+                            }
+                        }) 
+                        //console.log('self.page.on_callback_promise'+self.page.on_callback_promise)
+                    }
+                    //resolve();
+                    //resolve();
+            })
+})
+
+page.on_loadfinished_promise.push(function(){
     
+    performance =  page.evaluate(function(){
+        return  window.performance;
+    })
 
-}
+    k_report = page.evaluate(function(){
+        return window.k_report;
+    })
+
+    similar_picture = page.evaluate(function(){
+        return window.similar_picture || {}
+    })
 
 
-page.onLoadFinished = function(){
-    page.on_load_finished_promise.reduce(function(promise, callback){
-        return promise.then(function(){
-            return callback();
-        })
-    },Promise.resolve())
-}*/
+    
+   
+    result.navigationStart = performance.timing.navigationStart;
 
+    result.dom_complete = k_report.dom_complete;
+    result.window_onload = k_report.window_onload;
+
+    result.white_screen = similar_picture.white_screen;
+    result.atf = similar_picture.atf;
+
+    result.total_resources_num = resources.total_resources_num;
+    result.total_resources_size = resources.total_resources_size;
+
+    console.log('open callback'+JSON.stringify(result, null, 4));
+})
 
 if (system.args.length === 1) {
     console.log('Usage: loadspeed.js <some URL>');
@@ -79,21 +112,6 @@ if (system.args.length === 1) {
             t = Date.now() - t;
             console.log('Loading time ' + t + ' msec');
             
-            k_report = page.evaluate(function(){
-                return window.k_report;
-            })
-            performance =  page.evaluate(function(){
-                return  window.performance;
-            })
-           
-            result.navigationStart = performance.timing.navigationStart;
-            result.dom_complete = k_report.dom_complete;
-            result.window_onload = k_report.window_onload;
-            result.total_resources_num = resources.total_resources_num;
-            result.total_resources_size = resources.total_resources_size;
-            console.log('open callback'+JSON.stringify(result, null, 4));
-
-           
            
 
             setTimeout(function(){
