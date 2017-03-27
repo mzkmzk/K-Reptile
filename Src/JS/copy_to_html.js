@@ -24,7 +24,7 @@ window.copy_to_html = function(_atf){
         
         }.bind(null,image)
 
-        image.src = "data:image/png;base64,"+ _atf.capture_array[i]; 
+        image.src = "data:image/png;base64,"+ _atf.capture_array[i].image_base64; 
     }
     alert(document.body.innerHTML);
 

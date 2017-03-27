@@ -16,13 +16,15 @@ var Resources = require('./Resources'),
     port = 10220,
     resources = new Resources(page),
     system = require('system'),
+    debug = system.args.indexOf('--debug=true') !== -1,
     Screenshot = require('./Screenshot.js'),
     screenshot = new Screenshot(page),
+    
     fs =  require("fs"),
     Listener_Page = require('./Listener_Page.js'), 
     performance, k_report, similar_picture,
     result = {
-        navigationStart: -1,
+        navigation_start: -1,
         dom_complete: -1,
         white_screen: -1,
         atf: -1,
@@ -37,11 +39,12 @@ new Listener_Page(phantom, page);
 
 
 page.on_initialized_promise.push(function(){
-    console.log('injectJs get_data'+page.injectJs('../JS/get_data.js'));
+    var result = page.injectJs('../JS/get_data.js');
+    if (debug)
+    console.log('injectJs get_data'+result);
 })
 
 page.on_loadfinished_promise.push(function(){
-    console.log('on_loadfinished_promise')
     return  new Promise(function(resolve){
                     var window_onload = self.page.evaluate(function(){
                         return window.k_report.window_onload
@@ -81,7 +84,7 @@ page.on_loadfinished_promise.push(function(){
 
     
    
-    result.navigationStart = performance.timing.navigationStart;
+    result.navigation_start = performance.timing.navigationStart;
 
     result.dom_complete = k_report.dom_complete;
     result.window_onload = k_report.window_onload;
@@ -92,7 +95,16 @@ page.on_loadfinished_promise.push(function(){
     result.total_resources_num = resources.total_resources_num;
     result.total_resources_size = resources.total_resources_size;
 
-    console.log('open callback'+JSON.stringify(result, null, 4));
+    if ( debug )
+    console.log(JSON.stringify(result, null, 4));
+
+    console.log('白屏完成时间'+  ( result.white_screen - result.navigation_start ) );
+    console.log('dom_complete完成时间'+ (result.dom_complete - result.navigation_start) );
+    
+    console.log('首屏完成时间'+ ( result.atf - result.navigation_start ) );
+    console.log('window.onload完成时间'+ (result.window_onload - result.navigation_start) );
+    console.log('资源总数: '+result.total_resources_num );
+    console.log("资源总大小: "+result.total_resources_size)
 })
 
 if (system.args.length === 1) {

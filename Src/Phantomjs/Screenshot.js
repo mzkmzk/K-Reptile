@@ -1,4 +1,6 @@
-var Promise = require('es6-promise').Promise;
+var Promise = require('es6-promise').Promise,
+    system = require('system'),
+    debug = system.args.indexOf('--debug=true') !== -1;
 
 var Screenshot =  function( page ){
 
@@ -18,8 +20,14 @@ var Screenshot =  function( page ){
     };
 
     page.on_initialized_promise.push(function(){
-        console.log('injectJs copy_to_html'+page.injectJs('../JS/copy_to_html.js'));       
-        console.log('injectJs similar_picture'+page.injectJs('../JS/similar_picture.js'));
+        var copy_to_html_rsult = page.injectJs('../JS/copy_to_html.js');
+         var similar_picture_rsult = page.injectJs('../JS/similar_picture.js');
+        
+        if (debug) {
+            console.log('injectJs copy_to_html'+copy_to_html_rsult);       
+            console.log('injectJs similar_picture'+similar_picture_rsult);
+        }
+        
     })
 
 }
@@ -38,10 +46,10 @@ Screenshot.prototype.get_interval_capture = function(){
         
         self.page.render('./__temp_atf_picture/'+ new Date().getTime()+'hehe.png',{format: 'png', quality: 100}) 
 
-        console.log(time)
+        //console.log(time)
 
     },0)
-    console.log('get self.interval'+self.intervalId)
+    
         
 }
 
@@ -59,7 +67,7 @@ Screenshot.prototype.set_listener = function(){
             //setTimeout(function(){
                 
                 self.page.on_alert_promise.push(function(result){
-                    console.log('callback'+JSON.stringify(arguments));
+                   
                     result = JSON.parse(result);
                     
                     if (result && result.command === 'computer_similar_exit') {
@@ -69,7 +77,7 @@ Screenshot.prototype.set_listener = function(){
                     }
                     return;
                 });
-                console.log(self.page.on_alert_promise)
+                //console.log(self.page.on_alert_promise)
 
                 page.evaluate(function(screenshot){
                 

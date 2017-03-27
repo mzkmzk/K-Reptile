@@ -1,3 +1,6 @@
+var system = require('system'),
+    debug = system.args.indexOf('--debug=true') !== -1;
+
 var Listener_Page = function(phantom, page){
   phantom.onError = function(msg, trace) {
     var msgStack = ['Listener_Page PHANTOM ERROR: ' + msg];
@@ -28,6 +31,7 @@ var Listener_Page = function(phantom, page){
   };
 
   page.on_alert_promise.push(function(){
+    if (debug)
     console.log('Listener_Page onAlert'+JSON.stringify(arguments));
     return;
   })
