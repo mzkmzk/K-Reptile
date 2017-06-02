@@ -48,6 +48,7 @@ function computer_similar(_atf){
         }
 
     }
+    
     alert(typeof window.callPhantom);
 
     alert(JSON.stringify({
