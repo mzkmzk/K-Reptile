@@ -9,7 +9,7 @@ NodeJS Reptile Tools
 phantomjs ./Src/Phantomjs/report.js http://qq.com
 
 ```shell
-~/Learning/apache_sites/K-Reptile   master ✘ ✹  phantomjs ./Src/Phantomjs/report.js http://qq.com
+~/Learning/apache_sites/K-Reptile/  phantomjs ./Src/Phantomjs/report.js http://qq.com
 Listener_Page page.onResourceError{"0":{"errorCode":203,"errorString":"Error downloading http://wa.gtimg.com//wa.gtimg.com/website/201705/yqdzxsy_ACW_20170519145353989.swf - server replied: Not Found","id":252,"status":404,"statusText":"Not Found","url":"http://wa.gtimg.com//wa.gtimg.com/website/201705/yqdzxsy_ACW_20170519145353989.swf"}}
 Loading time 4741 msec
 白屏完成时间1067
